@@ -1,15 +1,13 @@
 {
   "name": "strapi-plugin-custom-dashboard",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "description": "Adds an injection zone to be able to add your own dashboard",
   "strapi": {
-    "name": "Custom Dashboard",
+    "name": "custom-dashboard",
+    "displayName": "Custom dashboard",
     "description": "Adds an injection zone to be able to add your own dashboard",
     "kind": "plugin"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
@@ -40,7 +38,8 @@
   },
   "scripts": {
     "develop": "tsc -w",
-    "build": "tsc"
+    "build": "./build.sh",
+    "release": "./release.sh"
   },
   "license": "MIT"
 }
