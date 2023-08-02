@@ -1,26 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
-import DefaultDashboard from "./default-dashboard";
+import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import DefaultDashboard from './default-dashboard';
 
 const DashboardPortal = () => {
   const [ref, setRef] = useState<HTMLElement | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>();
 
   const getRoot = () => {
     setTimeout(() => {
-      const root = document.getElementById("main-content");
+      const root = document.getElementById('main-content');
       if (!root) {
         getRoot();
         return;
       }
 
       setRef(root);
-      setIsLoading(false);
     }, 10);
   };
 
   useEffect(() => {
-    setIsLoading(true);
     getRoot();
   }, []);
 
@@ -40,7 +37,7 @@ const App = () => {
 `;
 
   return (
-    <div>
+    <div onClick={(e) => e.stopPropagation()}>
       <style>{css}</style>
 
       <DashboardPortal />
