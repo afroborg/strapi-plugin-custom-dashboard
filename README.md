@@ -2,7 +2,7 @@
 
 This plugin adds an injection zone to the homepage of your Strapi admin panel (`/admin`.)
 
-It enables injection of your own custom Component instead of the defualt.
+It enables injection of your own custom Component instead of the default.
 
 ## Installation
 
