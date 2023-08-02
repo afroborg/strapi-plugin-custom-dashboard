@@ -7,6 +7,9 @@
     "description": "Adds an injection zone to be able to add your own dashboard",
     "kind": "plugin"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
