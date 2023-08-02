@@ -1,0 +1,24 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/admin",
+
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "target": "ES5",
+    "strict": false,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react",
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "noEmitOnError": false,
+    "resolveJsonModule": true,
+    "module": "CommonJS",
+    "declaration": true
+  },
+
+  "exclude": ["node_modules/", "dist/", "**/*.test.ts"]
+}
